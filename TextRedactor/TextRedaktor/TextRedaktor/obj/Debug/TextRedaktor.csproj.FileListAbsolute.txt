@@ -20,3 +20,13 @@ C:\Users\Администратор\Desktop\1\C#\c#\TextRedaktor\TextRedaktor\ob
 D:\c#\TextRedaktor\TextRedaktor\bin\Debug\TextRedaktor.exe.config
 D:\c#\TextRedaktor\TextRedaktor\obj\Debug\TextRedaktor.exe
 D:\c#\TextRedaktor\TextRedaktor\obj\Debug\TextRedaktor.pdb
+C:\Users\Shellar\Documents\GitHub\TextRedactor\TextRedaktor\TextRedaktor\bin\Debug\TextRedaktor.exe.config
+C:\Users\Shellar\Documents\GitHub\TextRedactor\TextRedaktor\TextRedaktor\obj\Debug\TextRedaktor.exe
+C:\Users\Shellar\Documents\GitHub\TextRedactor\TextRedaktor\TextRedaktor\obj\Debug\TextRedaktor.pdb
+C:\Users\Shellar\Documents\GitHub\TextRedactor\TextRedaktor\TextRedaktor\bin\Debug\TextRedaktor.exe
+C:\Users\Shellar\Documents\GitHub\TextRedactor\TextRedaktor\TextRedaktor\bin\Debug\TextRedaktor.pdb
+C:\Users\Shellar\Documents\GitHub\TextRedactor\TextRedaktor\TextRedaktor\obj\Debug\TextRedaktor.csprojResolveAssemblyReference.cache
+C:\Users\Shellar\Documents\GitHub\TextRedactor\TextRedaktor\TextRedaktor\obj\Debug\TextRedaktor.MainForm.resources
+C:\Users\Shellar\Documents\GitHub\TextRedactor\TextRedaktor\TextRedaktor\obj\Debug\TextRedaktor.frmSizeOftext.resources
+C:\Users\Shellar\Documents\GitHub\TextRedactor\TextRedaktor\TextRedaktor\obj\Debug\TextRedaktor.Properties.Resources.resources
+C:\Users\Shellar\Documents\GitHub\TextRedactor\TextRedaktor\TextRedaktor\obj\Debug\TextRedaktor.csproj.GenerateResource.Cache

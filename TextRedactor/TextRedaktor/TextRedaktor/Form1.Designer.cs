@@ -47,7 +47,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnCurrentDate = new System.Windows.Forms.Button();
+            this.btnCopy = new System.Windows.Forms.Button();
             this.btnTextColor = new System.Windows.Forms.Button();
             this.btnBackColor = new System.Windows.Forms.Button();
             this.btnTextType = new System.Windows.Forms.Button();
@@ -58,12 +58,17 @@
             this.btnCenter = new System.Windows.Forms.Button();
             this.btnLeft = new System.Windows.Forms.Button();
             this.btnRight = new System.Windows.Forms.Button();
-            this.btnFind = new System.Windows.Forms.Button();
+            this.btnPaste = new System.Windows.Forms.Button();
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.colorDialog2 = new System.Windows.Forms.ColorDialog();
             this.OFD1 = new System.Windows.Forms.OpenFileDialog();
             this.SFD1 = new System.Windows.Forms.SaveFileDialog();
+            this.btnCopyStyle = new System.Windows.Forms.Button();
+            this.btnPasteStyle = new System.Windows.Forms.Button();
+            this.englishToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ukrainianToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlTopPanel.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -109,21 +114,21 @@
             // openFileToolStripMenuItem
             // 
             this.openFileToolStripMenuItem.Name = "openFileToolStripMenuItem";
-            this.openFileToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.openFileToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.openFileToolStripMenuItem.Text = "Open file";
             this.openFileToolStripMenuItem.Click += new System.EventHandler(this.EVEOpenFile);
             // 
             // saveFileToolStripMenuItem
             // 
             this.saveFileToolStripMenuItem.Name = "saveFileToolStripMenuItem";
-            this.saveFileToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.saveFileToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.saveFileToolStripMenuItem.Text = "Save file";
             this.saveFileToolStripMenuItem.Click += new System.EventHandler(this.EVESave);
             // 
             // newFileToolStripMenuItem
             // 
             this.newFileToolStripMenuItem.Name = "newFileToolStripMenuItem";
-            this.newFileToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.newFileToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.newFileToolStripMenuItem.Text = "Save as ...";
             this.newFileToolStripMenuItem.Click += new System.EventHandler(this.EVESaveIn);
             // 
@@ -142,20 +147,24 @@
             // 
             // viewToolStripMenuItem
             // 
+            this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.englishToolStripMenuItem,
+            this.ukrainianToolStripMenuItem,
+            this.rusToolStripMenuItem});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.viewToolStripMenuItem.Text = "View";
             // 
             // optionToolStripMenuItem
             // 
             this.optionToolStripMenuItem.Name = "optionToolStripMenuItem";
-            this.optionToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.optionToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.optionToolStripMenuItem.Text = "Option";
             // 
             // profileToolStripMenuItem
             // 
             this.profileToolStripMenuItem.Name = "profileToolStripMenuItem";
-            this.profileToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.profileToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.profileToolStripMenuItem.Text = "Profile";
             // 
             // toolStripSplitButton3
@@ -173,14 +182,14 @@
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.helpToolStripMenuItem.Text = "Help";
             this.helpToolStripMenuItem.Click += new System.EventHandler(this.EVEhelp);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.EVEAbout);
             // 
@@ -222,14 +231,15 @@
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.ColumnCount = 6;
+            this.tableLayoutPanel1.ColumnCount = 7;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.4359F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.5641F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 76F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 82F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 87F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 133F));
-            this.tableLayoutPanel1.Controls.Add(this.btnCurrentDate, 5, 0);
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 77F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 76F));
+            this.tableLayoutPanel1.Controls.Add(this.btnCopy, 5, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnTextColor, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnBackColor, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.btnTextType, 1, 0);
@@ -240,7 +250,9 @@
             this.tableLayoutPanel1.Controls.Add(this.btnCenter, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.btnLeft, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.btnRight, 4, 1);
-            this.tableLayoutPanel1.Controls.Add(this.btnFind, 5, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btnPaste, 5, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btnCopyStyle, 6, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnPasteStyle, 6, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -251,23 +263,23 @@
             this.tableLayoutPanel1.TabIndex = 0;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
-            // btnCurrentDate
+            // btnCopy
             // 
-            this.btnCurrentDate.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnCurrentDate.Location = new System.Drawing.Point(426, 3);
-            this.btnCurrentDate.Name = "btnCurrentDate";
-            this.btnCurrentDate.Size = new System.Drawing.Size(128, 22);
-            this.btnCurrentDate.TabIndex = 11;
-            this.btnCurrentDate.Text = "Copy";
-            this.btnCurrentDate.UseVisualStyleBackColor = true;
-            this.btnCurrentDate.Click += new System.EventHandler(this.EVECopy);
+            this.btnCopy.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnCopy.Location = new System.Drawing.Point(406, 3);
+            this.btnCopy.Name = "btnCopy";
+            this.btnCopy.Size = new System.Drawing.Size(71, 22);
+            this.btnCopy.TabIndex = 11;
+            this.btnCopy.Text = "Copy";
+            this.btnCopy.UseVisualStyleBackColor = true;
+            this.btnCopy.Click += new System.EventHandler(this.EVECopy);
             // 
             // btnTextColor
             // 
             this.btnTextColor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnTextColor.Location = new System.Drawing.Point(3, 3);
             this.btnTextColor.Name = "btnTextColor";
-            this.btnTextColor.Size = new System.Drawing.Size(78, 22);
+            this.btnTextColor.Size = new System.Drawing.Size(69, 22);
             this.btnTextColor.TabIndex = 0;
             this.btnTextColor.Text = "Text Color";
             this.btnTextColor.UseVisualStyleBackColor = true;
@@ -278,7 +290,7 @@
             this.btnBackColor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnBackColor.Location = new System.Drawing.Point(3, 31);
             this.btnBackColor.Name = "btnBackColor";
-            this.btnBackColor.Size = new System.Drawing.Size(78, 22);
+            this.btnBackColor.Size = new System.Drawing.Size(69, 22);
             this.btnBackColor.TabIndex = 1;
             this.btnBackColor.Text = "Back Color";
             this.btnBackColor.UseVisualStyleBackColor = true;
@@ -287,9 +299,9 @@
             // btnTextType
             // 
             this.btnTextType.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnTextType.Location = new System.Drawing.Point(87, 3);
+            this.btnTextType.Location = new System.Drawing.Point(78, 3);
             this.btnTextType.Name = "btnTextType";
-            this.btnTextType.Size = new System.Drawing.Size(88, 22);
+            this.btnTextType.Size = new System.Drawing.Size(77, 22);
             this.btnTextType.TabIndex = 2;
             this.btnTextType.Text = "Type of text";
             this.btnTextType.UseVisualStyleBackColor = true;
@@ -298,9 +310,9 @@
             // btnTextSize
             // 
             this.btnTextSize.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnTextSize.Location = new System.Drawing.Point(87, 31);
+            this.btnTextSize.Location = new System.Drawing.Point(78, 31);
             this.btnTextSize.Name = "btnTextSize";
-            this.btnTextSize.Size = new System.Drawing.Size(88, 22);
+            this.btnTextSize.Size = new System.Drawing.Size(77, 22);
             this.btnTextSize.TabIndex = 3;
             this.btnTextSize.Text = "Text Size";
             this.btnTextSize.UseVisualStyleBackColor = true;
@@ -309,7 +321,7 @@
             // btnBold
             // 
             this.btnBold.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnBold.Location = new System.Drawing.Point(181, 3);
+            this.btnBold.Location = new System.Drawing.Point(161, 3);
             this.btnBold.Name = "btnBold";
             this.btnBold.Size = new System.Drawing.Size(70, 22);
             this.btnBold.TabIndex = 5;
@@ -320,7 +332,7 @@
             // btnU
             // 
             this.btnU.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnU.Location = new System.Drawing.Point(257, 3);
+            this.btnU.Location = new System.Drawing.Point(237, 3);
             this.btnU.Name = "btnU";
             this.btnU.Size = new System.Drawing.Size(76, 22);
             this.btnU.TabIndex = 6;
@@ -331,7 +343,7 @@
             // btnI
             // 
             this.btnI.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnI.Location = new System.Drawing.Point(339, 3);
+            this.btnI.Location = new System.Drawing.Point(319, 3);
             this.btnI.Name = "btnI";
             this.btnI.Size = new System.Drawing.Size(81, 22);
             this.btnI.TabIndex = 7;
@@ -342,7 +354,7 @@
             // btnCenter
             // 
             this.btnCenter.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnCenter.Location = new System.Drawing.Point(181, 31);
+            this.btnCenter.Location = new System.Drawing.Point(161, 31);
             this.btnCenter.Name = "btnCenter";
             this.btnCenter.Size = new System.Drawing.Size(70, 22);
             this.btnCenter.TabIndex = 8;
@@ -353,7 +365,7 @@
             // btnLeft
             // 
             this.btnLeft.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnLeft.Location = new System.Drawing.Point(257, 31);
+            this.btnLeft.Location = new System.Drawing.Point(237, 31);
             this.btnLeft.Name = "btnLeft";
             this.btnLeft.Size = new System.Drawing.Size(76, 22);
             this.btnLeft.TabIndex = 9;
@@ -364,7 +376,7 @@
             // btnRight
             // 
             this.btnRight.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnRight.Location = new System.Drawing.Point(339, 31);
+            this.btnRight.Location = new System.Drawing.Point(319, 31);
             this.btnRight.Name = "btnRight";
             this.btnRight.Size = new System.Drawing.Size(81, 22);
             this.btnRight.TabIndex = 10;
@@ -372,16 +384,16 @@
             this.btnRight.UseVisualStyleBackColor = true;
             this.btnRight.Click += new System.EventHandler(this.EVERight);
             // 
-            // btnFind
+            // btnPaste
             // 
-            this.btnFind.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnFind.Location = new System.Drawing.Point(426, 31);
-            this.btnFind.Name = "btnFind";
-            this.btnFind.Size = new System.Drawing.Size(128, 22);
-            this.btnFind.TabIndex = 12;
-            this.btnFind.Text = "Paste";
-            this.btnFind.UseVisualStyleBackColor = true;
-            this.btnFind.Click += new System.EventHandler(this.EVEPaste);
+            this.btnPaste.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnPaste.Location = new System.Drawing.Point(406, 31);
+            this.btnPaste.Name = "btnPaste";
+            this.btnPaste.Size = new System.Drawing.Size(71, 22);
+            this.btnPaste.TabIndex = 12;
+            this.btnPaste.Text = "Paste";
+            this.btnPaste.UseVisualStyleBackColor = true;
+            this.btnPaste.Click += new System.EventHandler(this.EVEPaste);
             // 
             // fontDialog1
             // 
@@ -390,6 +402,48 @@
             // OFD1
             // 
             this.OFD1.FileName = "openFileDialog1";
+            // 
+            // btnCopyStyle
+            // 
+            this.btnCopyStyle.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnCopyStyle.Location = new System.Drawing.Point(483, 3);
+            this.btnCopyStyle.Name = "btnCopyStyle";
+            this.btnCopyStyle.Size = new System.Drawing.Size(71, 22);
+            this.btnCopyStyle.TabIndex = 13;
+            this.btnCopyStyle.Text = "Copy Style";
+            this.btnCopyStyle.UseVisualStyleBackColor = true;
+            this.btnCopyStyle.Click += new System.EventHandler(this.EVECopyStyle);
+            // 
+            // btnPasteStyle
+            // 
+            this.btnPasteStyle.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnPasteStyle.Location = new System.Drawing.Point(483, 31);
+            this.btnPasteStyle.Name = "btnPasteStyle";
+            this.btnPasteStyle.Size = new System.Drawing.Size(71, 22);
+            this.btnPasteStyle.TabIndex = 14;
+            this.btnPasteStyle.Text = "Paste Style";
+            this.btnPasteStyle.UseVisualStyleBackColor = true;
+            this.btnPasteStyle.Click += new System.EventHandler(this.EVEPasteFont);
+            // 
+            // englishToolStripMenuItem
+            // 
+            this.englishToolStripMenuItem.Name = "englishToolStripMenuItem";
+            this.englishToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.englishToolStripMenuItem.Text = "English";
+            this.englishToolStripMenuItem.Click += new System.EventHandler(this.EVEChangeLangEng);
+            // 
+            // ukrainianToolStripMenuItem
+            // 
+            this.ukrainianToolStripMenuItem.Name = "ukrainianToolStripMenuItem";
+            this.ukrainianToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.ukrainianToolStripMenuItem.Text = "Ukrainian";
+            this.ukrainianToolStripMenuItem.Click += new System.EventHandler(this.EVEChangeLangUkr);
+            // 
+            // rusToolStripMenuItem
+            // 
+            this.rusToolStripMenuItem.Name = "rusToolStripMenuItem";
+            this.rusToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.rusToolStripMenuItem.Text = "rus";
             // 
             // MainForm
             // 
@@ -446,10 +500,15 @@
         private System.Windows.Forms.Button btnCenter;
         private System.Windows.Forms.Button btnLeft;
         private System.Windows.Forms.Button btnRight;
-        private System.Windows.Forms.Button btnCurrentDate;
-        private System.Windows.Forms.Button btnFind;
+        private System.Windows.Forms.Button btnCopy;
+        private System.Windows.Forms.Button btnPaste;
         private System.Windows.Forms.OpenFileDialog OFD1;
         private System.Windows.Forms.SaveFileDialog SFD1;
+        private System.Windows.Forms.Button btnCopyStyle;
+        private System.Windows.Forms.Button btnPasteStyle;
+        private System.Windows.Forms.ToolStripMenuItem englishToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ukrainianToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem rusToolStripMenuItem;
     }
 }
 

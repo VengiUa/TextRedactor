@@ -19,6 +19,10 @@ namespace TextRedaktor
         }
 
         Font MyFont;
+        Font PasteFont;
+        Color textColor;
+        Color BackColor;
+        HorizontalAlignment MyAlig;
         protected int sizeOfMyText = 10;
         string _sometext;
         string _currentpath = "C:\\MyFirstProject.rtf";
@@ -275,6 +279,91 @@ namespace TextRedaktor
         private void EVEAbout(object sender, EventArgs e)
         {
             MessageBox.Show("This program was created by VNG");
+        }
+
+        private void EVEPasteFont(object sender, EventArgs e)
+        {
+            RTBMyText.SelectionFont = PasteFont;
+            RTBMyText.SelectionColor = textColor;
+            RTBMyText.SelectionBackColor = BackColor;
+            RTBMyText.SelectionAlignment = MyAlig;
+        }
+
+        private void EVECopyStyle(object sender, EventArgs e)
+        {
+            PasteFont = RTBMyText.SelectionFont;
+            textColor = RTBMyText.SelectionColor;
+            BackColor = RTBMyText.SelectionBackColor;
+            MyAlig = RTBMyText.SelectionAlignment;
+        }
+
+        private void EVEChangeLangUkr(object sender, EventArgs e)
+        {
+            RTBMyText.Name = "Текстовий редактор";
+            toolStripSplitButton1.Text = "Щось зроби з файлом";
+            openFileToolStripMenuItem.Text = "Вiдкрити щось...";
+            saveFileToolStripMenuItem.Text = "Кудись цей файл засунути...";
+            newFileToolStripMenuItem.Text = "Засейвитись";
+            toolStripSplitButton2.Text = "Рiзна маячня";
+            viewToolStripMenuItem.Text = "Мова, а э питання?";
+            optionToolStripMenuItem.Text = "Якась фiгня";
+            profileToolStripMenuItem.Text = "Даннi про папiр";
+            englishToolStripMenuItem.Text = "Англiйська";
+            rusToolStripMenuItem.Text = "Мова окупанта";
+            ukrainianToolStripMenuItem.Text = "Рiдна спiвоча мова";
+            toolStripSplitButton3.Text = "Щось ще";
+            helpToolStripMenuItem.Text = "Допомога - сам собi допоможи";
+            aboutToolStripMenuItem.Text = "О програмi";
+            btnTextColor.Text = "Колiр лiтер";
+            btnBackColor.Text = "Колiр папiрусу";
+            btnTextType.Text = "Купа налаштувань";
+            btnTextSize.Text = "Розмiр, а маэ значення?";
+            btnBold.Text = "Товстий";
+            btnI.Text = "Кривий";
+            btnU.Text = "З 1 полоскою";
+            btnCenter.Text = "По центру";
+            btnLeft.Text = "З лiвого краю";
+            btnRight.Text = "З правого краю";
+            btnCopy.Text = "Клонувати у буфер";
+            btnPaste.Text = "Забрати у буфера";
+            btnCopyStyle.Text = "Копiювати калечнiсть тексту";
+            btnPasteStyle.Text = "Зробити цей текст таким же вмазаним";
+
+
+
+        }
+
+        private void EVEChangeLangEng(object sender, EventArgs e)
+        {
+            RTBMyText.Name = "Text redactor";
+            toolStripSplitButton1.Text = "File";
+            openFileToolStripMenuItem.Text = "Open...";
+            saveFileToolStripMenuItem.Text = "Save as...";
+            newFileToolStripMenuItem.Text = "Save";
+            toolStripSplitButton2.Text = "Settings";
+            viewToolStripMenuItem.Text = "View";
+            optionToolStripMenuItem.Text = "Option";
+            profileToolStripMenuItem.Text = "Profile";
+            englishToolStripMenuItem.Text = "English";
+            rusToolStripMenuItem.Text = "PArussian";
+            ukrainianToolStripMenuItem.Text = "Ukrainian";
+            toolStripSplitButton3.Text = "Simple";
+            helpToolStripMenuItem.Text = "Help";
+            aboutToolStripMenuItem.Text = "About";
+            btnTextColor.Text = "TextColor";
+            btnBackColor.Text = "BackColor";
+            btnTextType.Text = "Text type";
+            btnTextSize.Text = "Size";
+            btnBold.Text = "Bold";
+            btnI.Text = "Italic";
+            btnU.Text = "Underline";
+            btnCenter.Text = "Center";
+            btnLeft.Text = "Left";
+            btnRight.Text = "Right";
+            btnCopy.Text = "Copy";
+            btnPaste.Text = "Paste";
+            btnCopyStyle.Text = "Copy style";
+            btnPasteStyle.Text = "Paste style";   
         }
 
     }
